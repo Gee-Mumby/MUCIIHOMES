@@ -1,6 +1,12 @@
-<h2>{{home.name|uppercase}} Details</h2>
-<div><span>id:</span>{{home.id}}</div>
-<div>
-  <label for="name"> HOME NAME:</label> 
-  <input id="name" [(ngModel)] = "home.name" placeholder ="name">
-</div>
+<h2>My Homes</h2>
+  <ul>
+    <li *ngFor="let home of homes">
+      <button type="button"> 
+        <span class="badge">{{home.id}}</span>      
+        <span class="name">{{home.name}}</span>
+      </button>
+    </li>
+</ul>
+
+
+

@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
-import { Home } from '../homes';
-
+import { HOMES } from '../mock-homes';
+import{
+/*...*/
+NgFor,
+/*...*/
+} from '@angular/common';
 
 @Component({
   selector: 'app-homes',
   templateUrl: './homes.component.html',
-  styleUrl: './homes.component.css'
+  styleUrl: './homes.component.css',
+  standalone:true,
+  imports:[
+    NgFor,
+  ],
 })
 
 export class HomesComponent {
-home: Home = {
-  id: 1,
-  name: 'Kilifi'
-
-};
+homes = HOMES;
 }
