@@ -1,12 +1,25 @@
 <h2>My Homes</h2>
-  <ul>
+  <ul class="homes">
     <li *ngFor="let home of homes">
-      <button type="button"> 
+      <button [class.selected] = "home ===selectedHome" type="button" 
+      (click)="onSelect(home)">
         <span class="badge">{{home.id}}</span>      
         <span class="name">{{home.name}}</span>
       </button>
     </li>
-</ul>
+  </ul>
+
+<div *ngIf="selectedHome">
+  <h2>{{selectedHome.name |uppercase}}
+  Details</h2>
+    <div>id: {{selectedHome.id}}</div>
+    <div>
+      <label for="home-name">Home name: </label>
+      <input id="home-name" [(ngModel)]="selectedHome.name" placeholder="name">
+    </div>
+  </div>
+
+
 
   
 
