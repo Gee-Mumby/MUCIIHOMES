@@ -10,18 +10,13 @@ import { MessageService } from '../message.service'; //can't remember at what st
 })
 
 export class HomesComponent implements OnInit{
-selectedHome?: Home;
+
 homes: Home[] = [];
 
 constructor(private homeService: HomeService,private messageService: MessageService) {} //we've added private msg service???
 
 ngOnInit(): void{
   this.getHomes();
-  }
-
-onSelect(home: Home): void {
-  this.selectedHome = home;
-  this.messageService.add(`HomesComponent: Selected home id=${home.id}`)
   }
 
 getHomes(): void {

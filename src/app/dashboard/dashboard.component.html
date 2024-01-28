@@ -1,6 +1,7 @@
 <h2>FAVORITE HOMES</h2>
 <div class="homes-menu">
-  <a *ngFor="let home of homes">
+  <a *ngFor="let home of homes"
+    routerLink="/detail/{{home.id}}">
     {{home.name}}
   </a>
 </div>

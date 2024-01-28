@@ -64,3 +64,31 @@
   .homes .name {
     align-self: center;
   }
+
+  /* css for the list of homes once separated from main dashboard. Remember to edit the heroes to homes*/
+.homes li:hover {
+  left: .1em;
+}
+
+.homes a {
+  color: #333;
+  text-decoration: none;
+  background-color: #d610b5;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.homes a:hover {
+  color: #2c3a41;
+  background-color: #076933;
+}
+
+.homes a:active {
+  background-color: #690f8d;
+  color: #fafafa;
+}
+

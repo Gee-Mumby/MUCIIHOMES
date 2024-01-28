@@ -17,5 +17,13 @@ export class HomeService {
     this.messageService.add('HomeService: fetched homes');
     return homes; 
   }
+
+  getHome(id: number): Observable<Home> {
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added in the next step of the tutorial.
+    const home = HOMES.find(h => h.id === id)!;
+    this.messageService.add(`HomeService: fetched home id=${id}`);
+    return of(home);
+  }
 }
 

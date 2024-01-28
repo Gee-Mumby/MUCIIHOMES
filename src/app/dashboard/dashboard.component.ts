@@ -21,9 +21,4 @@ export class DashboardComponent implements OnInit{
     this.homeService.getHomes()
       .subscribe(homes => this.homes = homes.slice(1, 5));
   }
-
-
-
-
-
 }
