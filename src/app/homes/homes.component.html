@@ -9,16 +9,7 @@
     </li>
   </ul>
 
-<div *ngIf="selectedHome">
-  <h2>{{selectedHome.name |uppercase}}
-  Details</h2>
-    <div>id: {{selectedHome.id}}</div>
-    <div>
-      <label for="home-name">Home name: </label>
-      <input id="home-name" [(ngModel)]="selectedHome.name" placeholder="name">
-    </div>
-  </div>
-
+   <app-home-detail [home]="selectedHome"></app-home-detail>
 
 
   

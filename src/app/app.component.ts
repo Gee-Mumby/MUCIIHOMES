@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mucii Homes';
+  itemImageUrl = '../assets/phone.svg';
 }

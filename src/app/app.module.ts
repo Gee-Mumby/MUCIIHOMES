@@ -1,14 +1,20 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';//Where NgModel is located
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; //Where NgModel is located
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'; 
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
-import { HomesComponent } from './homes/homes.component'; //declaration of the HomesComponent removed because it is "unused"
+import { HomesComponent } from './homes/homes.component';
+import { HomeDetailComponent } from './homes/home-detail/home-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-   HomesComponent,//deleted HomesComponent since it cannot be part of the NgModule
+   HomesComponent,
+   HomeDetailComponent,
+   MessagesComponent,
+   DashboardComponent,
    ],
   imports: [
     BrowserModule,
