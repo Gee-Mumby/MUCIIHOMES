@@ -1,9 +1,22 @@
 <h2>My Homes</h2>
-  <ul class="homes">
+ 
+<div>
+  <label for="new-hero">Home name: </label>
+  <input id="new-hero" #homeName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(homeName.value); homeName.value=''">
+    Add home
+  </button>
+</div>
+
+<ul class="homes">
     <li *ngFor="let home of homes">
           <a routerLink="/detail/{{home.id}}">
-            <span class="badge">{{home.id}}</span> {{home.name}}
-          </a>
+            <span class="badge">{{home.id}}</span> {{home.name}}  </a>
+            <button type="button" class="delete" title="delete home"
+            (click)="delete(home)">x</button>
+         
     </li>
   </ul>
 

@@ -16,6 +16,13 @@ export class HomeDetailComponent {
  
   home!: Home;
 
+  // constructor is always placed inside the export class
+  constructor(
+    private route: ActivatedRoute,
+    private homeService: HomeService,
+    private location: Location
+  ) {}
+
   // The ngOnInit and getHome were are also being used to call data in the homes.component 
   
   ngOnInit(): void {
@@ -32,10 +39,11 @@ export class HomeDetailComponent {
     this.location.back();
   }
 
-  // constructor is always placed inside the export class
-  constructor(
-    private route: ActivatedRoute,
-    private homeService: HomeService,
-    private location: Location
-  ) {}
+  
+  save(): void {
+    if (this.home) {
+      this.homeService.updateHome(this.home)
+        .subscribe(() => this.goBack());
+    }
+  }
 }
